@@ -67,10 +67,10 @@ Visual results from various stages of the segmentation pipeline:
 <img src="images/Hue channels.png" alt="Hue Channels" width="400"/>
 
 ### 🟢 Vegetation Area Segmentation
-<img src="images/vegetation area.png" alt="Vegetation Area" width="400"/>
+<img src="images/Vegetation area.png" alt="Vegetation Area" width="400"/>
 
 ### ⚪ Concrete Area Segmentation
-<img src="images/concrete area.png" alt="Concrete Area" width="400"/>
+<img src="images/Concrete area.png" alt="Concrete Area" width="400"/>
 
 ---
 
