@@ -53,9 +53,23 @@ The technique relies on transforming color space from **BGR → RGB → HSV**, t
 
 ---
 
-## 📸 Output Example
+## 🖼️ Segmentation Outputs
 
+Here are key visual outputs from the HSV-based segmentation process:
 
+### 🔹 Original Image (BGR)
+<img src="BGR image.png" alt="BGR Image" width="400"/>
+
+### 🔹 Converted to RGB
+<img src="RGB image.png" alt="RGB Image" width="400"/>
+
+### 🔹 HSV Channel Visualization
+<img src="Hue channels.png" alt="Hue Channels" width="400"/>
+
+> 📌 Note: Final mask and segmented output will be color-coded as:
+> - **Vegetation:** Dark Green  
+> - **Concrete/Bare Ground:** Gray  
+> - **Unclassified Pixels:** Black
 
 ---
 
