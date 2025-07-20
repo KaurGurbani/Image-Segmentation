@@ -55,21 +55,29 @@ The technique relies on transforming color space from **BGR → RGB → HSV**, t
 
 ## 🖼️ Segmentation Outputs
 
-Here are key visual outputs from the HSV-based segmentation process:
+Visual results from various stages of the segmentation pipeline:
 
 ### 🔹 Original Image (BGR)
-<img src="BGR image.png" alt="BGR Image" width="400"/>
+<img src="images/BGR image.png" alt="BGR Image" width="400"/>
 
 ### 🔹 Converted to RGB
-<img src="RGB image.png" alt="RGB Image" width="400"/>
+<img src="images/RGB image.png" alt="RGB Image" width="400"/>
 
 ### 🔹 HSV Channel Visualization
-<img src="Hue channels.png" alt="Hue Channels" width="400"/>
+<img src="images/Hue channels.png" alt="Hue Channels" width="400"/>
 
-> 📌 Note: Final mask and segmented output will be color-coded as:
-> - **Vegetation:** Dark Green  
-> - **Concrete/Bare Ground:** Gray  
-> - **Unclassified Pixels:** Black
+### 🟢 Vegetation Area Segmentation
+<img src="images/vegetation area.png" alt="Vegetation Area" width="400"/>
+
+### ⚪ Concrete Area Segmentation
+<img src="images/concrete area.png" alt="Concrete Area" width="400"/>
+
+---
+
+> 🎨 **Color Legend**  
+> • Vegetation → 🟢 Dark Green  
+> • Concrete/Built-Up → ⚪ Gray  
+> • Unclassified → ⚫ Black
 
 ---
 
