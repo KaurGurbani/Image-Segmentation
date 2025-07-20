@@ -1,76 +1,75 @@
-# 🌍 Satellite Image Segmentation Using HSV – Practice Project
+# 🌍 Vegetation & Concrete Segmentation from Satellite Imagery (HSV-Based)
 
-This repository contains a Python-based project that performs **image segmentation on satellite imagery** to distinguish between **vegetation** and **concrete regions**, using **HSV color space** and **masking techniques**.
-
----
-
-## 📌 Project Overview
-
-This was a **practice project** completed as part of my self-learning journey in data science and computer vision. The objective was to take a raw satellite image and process it to separate:
-
-- 🌿 **Vegetation areas**
-- 🏗️ **Concrete/built-up areas**
-
-The segmentation was performed based on **color features** by converting the image from **BGR → RGB → HSV** format and applying **HSV-based thresholding** followed by **masking**.
+This repository showcases a **color-based image segmentation project** that identifies **vegetation** and **concrete/built-up areas** from satellite imagery using the **HSV color space** in **Python**.
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Project Description
 
-- Python
-- OpenCV
-- NumPy
-- Matplotlib
-- Visual Studio (used as IDE)
+As part of my self-learning in computer vision and geospatial data analysis, I developed this practice project to explore how color information in satellite images can be used to classify land surfaces. The image is segmented into:
 
----
+- 🌿 **Vegetation zones**
+- 🏗️ **Concrete/Bare ground areas**
 
-## 🧠 Key Concepts Used
-
-- Color space conversion (BGR → RGB → HSV)
-- HSV thresholding
-- Image masking
-- Satellite imagery processing
-- Pixel-based segmentation
+The technique relies on transforming color space from **BGR → RGB → HSV**, then applying HSV-based thresholding and masking to isolate regions of interest.
 
 ---
 
-## 🔍 How It Works
+## 🧪 Segmentation Pipeline
 
-1. Load the input satellite image using OpenCV (`cv2.imread`).
-2. Convert the image from BGR to RGB.
-3. Convert the RGB image to HSV color space.
-4. Define HSV ranges for vegetation and concrete areas.
-5. Apply `cv2.inRange()` to create binary masks.
-6. Use `cv2.bitwise_and()` to apply the masks and extract segmented regions.
-7. Visualize the results using Matplotlib.
+1. **Image Preprocessing**  
+   - Load satellite image  
+   - Convert from BGR → RGB → HSV  
+   - Resize to 512x512 for consistent results
 
----
+2. **HSV Channel Visualization**  
+   - Analyze Hue, Saturation, and Value separately to define effective thresholds
 
+3. **Color Thresholding**  
+   - **Vegetation**: Hue 35–90, moderate Saturation & Value  
+   - **Concrete**: Low Saturation (0–70), high Value (70–255), all Hue values
 
-## 🚀 Future Improvements
+4. **Overlap Handling**  
+   - Ensures no confusion between vegetation and concrete classification
 
-- Automate HSV range detection using clustering or K-means
-- Add GUI for interactive HSV tuning
-- Test on multiple satellite image types
-- Classify more land types (water, soil, etc.)
+5. **Mask Cleaning**  
+   - Applies **morphological closing** (dilation + erosion) to reduce noise and improve segmentation quality
 
----
-
-## 📚 Learning Reflections
-
-This project helped me:
-- Understand the importance of color spaces in image processing
-- Practice working with real-world visual datasets
-- Gain hands-on experience with OpenCV and pixel-level operations
+6. **Final Visualization**  
+   - Output image shows:
+     - Vegetation in dark green  
+     - Concrete in gray  
+     - Unclassified areas in black
 
 ---
 
-## 📎 License
+## 🛠️ Tools & Libraries
 
-This project is open for learning and experimentation. Feel free to fork and explore!
+- Python  
+- OpenCV  
+- NumPy  
+- Matplotlib  
+- Visual Studio (as IDE)
 
 ---
 
+## 📸 Output Example
 
 
+
+---
+
+## 📚 What I Learned
+
+- Image preprocessing and transformation techniques  
+- Color space concepts and HSV thresholding  
+- Morphological operations for mask refinement  
+- Real-world relevance of segmentation in environmental and urban analysis
+
+---
+
+## 📄 License
+
+This project is released under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
